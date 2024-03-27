@@ -26,7 +26,6 @@ class ModelArgs(Serializable):
     hidden_dim: int
     n_heads: int
     n_kv_heads: int
-    sliding_window: int
     norm_eps: float
     vocab_size: int
     rope_theta: float = 10000.0
@@ -62,7 +61,6 @@ class Attention(nn.Module):
         self.n_kv_heads: int = args.n_kv_heads
 
         self.repeats = self.n_heads // self.n_kv_heads
-        self.sliding_window = self.args.sliding_window
 
         self.scale = self.args.head_dim**-0.5
 

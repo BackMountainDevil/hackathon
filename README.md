@@ -9,8 +9,8 @@ Discord: [https://discord.com/invite/mistralai](https://discord.com/invite/mistr
 ### Download the model
 
 ```
-wget https://models.mistralcdn.com/mistral-7b-v0-1/mistral-7B-v0.1.tar
-tar -xf mistral-7B-v0.1.tar
+wget https://models.mistralcdn.com/mistral-7b-v0-2/mistral-7B-v0.2.tar
+tar -xf mistral-7B-v0.2.tar
 ```
 
 **Note**: The unzipped folder can be used as `initial_model_path:` in the training config.

@@ -49,7 +49,7 @@ def generate(
     seqlens = [len(x) for x in encoded_prompts]
 
     # Cache
-    cache_window = min(model.args.sliding_window, max(seqlens) + max_tokens)
+    cache_window = max(seqlens) + max_tokens
     cache = RotatingBufferCache(
         model.args.n_layers,
         model.args.max_batch_size,
